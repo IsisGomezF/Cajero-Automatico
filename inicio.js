@@ -1,0 +1,1 @@
+const cuenta = document.getElementById("name")
