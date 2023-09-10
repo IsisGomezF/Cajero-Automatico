@@ -1,21 +1,21 @@
 const accounts = [
-    { name: "Josefa", password: 1234, saldo: 1000000},
+    { name: "Josefa", password: "1234", saldo: 1000000},
     { name: "Cleto", password: "1234", saldo: 356900},
     { name: "Estrella", password: "1234", saldo: 356900},
     { name: "Chepe", password:"1234", saldo: 356900},
 ];
 
-//Referencia formulario con ID
+//Referenciar formulario con ID
 const loginForm = document.getElementById('loginForm');
 
 //Proceso para validar datos e ingresar a la pagina principal
 loginForm.addEventListener('submit', function(event){
     event.preventDefault (); //Previene que se actualice la pagina
     //Validacion de datos
-    if(loginForm.checkValidity()){
-        if(validateDates(loginForm)){
-            alert ("Correcto");
-            /*loaderAndRedirect({url:'../inicio.html'});//Redirecciona a la pagina principal*/
+    if(loginForm.checkValidity()){//Valida el requiered del form
+        if(validateDates(loginForm)){//Valida los datos dentro de loginForm
+            // alert ("Correcto");
+            loaderAndRedirect({url:'../inicio.html'});//Redirecciona a la pagina principal
         }
         else{
             alert("Usuario o contraseña inválidos");
@@ -27,13 +27,15 @@ loginForm.addEventListener('submit', function(event){
 }
 );
 
-//obtener los datos del formulario
-const usuario = document.getElementById("name").value;
-const clave = document.getElementById("password").value;
+// //obtener los datos del formulario
+// const usuario = document.getElementById("name").value;
+// const clave = document.getElementById("password").value;
 
 //validacion de credenciales
 function validateDates (){ // que pasa si no le doy parametros?
-    return accounts.some ((accounts) => accounts.name === usuario && accounts.password === clave);
+    const usuario = document.getElementById("name").value;
+    const clave = document.getElementById("password").value;
+    return accounts.some ((account) => account.name === usuario && account.password === clave); //.some devuelve un valor booleano
 }
 
 //Redirecionar

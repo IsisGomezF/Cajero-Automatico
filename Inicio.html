@@ -7,14 +7,15 @@
     <title>Transacciones en linea</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script defer src="./inicio.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
 
 
 </head>
-<body>
+<body class="">
     <header class="">
         <h1 class="text-center">Sucursal virtual personas</h1>
         <h3>Bienvenido</h3>
-        <h3 id="acount"></h3>
     </header>
     <nav class="navbar navbar-expand-lg navbar bg-primary"  data-bs-theme="dark">
         <div class="container-fluid">
@@ -25,10 +26,10 @@
                     <a class="nav-link active" aria-current="page" href="#">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Movimientos </a>
+                    <a class="nav-link active" aria-current="page" href="#">Transacciones</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Pagos</a>
+                    <a class="nav-link active" aria-current="page" href="#">Movimientos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Seguridad</a>
@@ -47,37 +48,37 @@
         </div>
         </div>
     </nav>
-    <main class="row align-items-center">
-        <div class="btn-group-vertical col-3" role="group" aria-label="Vertical radio toggle button group">
+    <main class="row align-items-center container-fluid ">
+        <div id="opotions" class="btn-group-vertical col-3" role="group" aria-label="Vertical radio toggle button group">
             <input type="radio" class="btn-check" name="add" id="add" autocomplete="off" >
             <label class="btn btn-outline-primary" for="add">Añadir fondos</label>
             <input type="radio" class="btn-check" name="less" id="less" autocomplete="off">
             <label class="btn btn-outline-primary" for="less">Retirar fondos</label>
-            <input type="radio" class="btn-check" name="transfer" id="transfer" autocomplete="off">
+            <!-- <input type="radio" class="btn-check" name="transfer" id="transfer" autocomplete="off">
             <label class="btn btn-outline-primary" for="transfer">Transferencias</label>
             <input type="radio" class="btn-check" name="pay" id="pay" autocomplete="off">
-            <label class="btn btn-outline-primary" for="pay">Pagar facturas</label>
+            <label class="btn btn-outline-primary" for="pay">Pagar facturas</label> -->
         </div>
-        <form id="amount" class="col-3 d-flex flex-column mb-3 container text-center fs-3">
-            <label for="cost">Ingresa el monto</label>
+        <form id="introduceAmount" class="col-3 d-flex flex-column mb-3 container text-center fs-3">
+            <label for="amount">Ingresa el monto</label>
             <div class="input-group mb-3">
                 <span class="input-group-text">$</span>
                 <span class="input-group-text">0.00</span>
-                <input id="cost" type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                <input id="amount" type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
             </div>
             <div class="d-grid gap-2 col-6 mx-auto ">
                 <button class="btn btn-success" type="button">Confirmar</button>
                 <button class="btn btn-danger" type="reset">Cancelar</button> 
             </div>
         </form> 
-        <section class="col-3  d-flex ">
+        <section id="balance" class="col-3 gap-1">
             <p class="gap-1 container text-center">
                 <button class="btn btn-primary container-fluid " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     Consulta tu saldo</button>
             </p>
             <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                <div class="card card-body text-center">
+                    HOLA
                 </div>
             </div>
         </section>
