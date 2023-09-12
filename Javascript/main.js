@@ -15,7 +15,8 @@ loginForm.addEventListener('submit', function(event){
     if(loginForm.checkValidity()){//Valida el requiered del form
         if(validateDates(loginForm)){//Valida los datos dentro de loginForm
             // alert ("Correcto");
-            loaderAndRedirect({url:'../inicio.html'});//Redirecciona a la pagina principal
+            saveToLocalStorage(loginForm);
+            loaderAndRedirect({url:'../pages/inicio.html'});//Redirecciona a la pagina principal
         }
         else{
             alert("Usuario o contraseña inválidos");
@@ -59,11 +60,10 @@ function hideLoader() {
 }
 
 //Guarda la credencial
-function saveToLocalStorage({ userName, userPassword }) {
-    const { value: user } = userName;
-    const { value: pass } = userPassword;
-    const acc = accounts.find(acc => acc.name === usuario && acc.password === clave);
-
+function saveToLocalStorage() {
+    const usuario = document.getElementById("name").value;
+    const clave = document.getElementById("password").value;
+    const acc = accounts.find(accounts => accounts.name === usuario && accounts.password === clave);
     // Guarda los valores en el almacenamiento local
     for (prop in acc) {
         localStorage.setItem(prop, acc[prop]);

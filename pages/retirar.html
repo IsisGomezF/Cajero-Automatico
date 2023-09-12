@@ -13,9 +13,9 @@
 
 </head>
 <body class="">
-    <header class="">
-        <h1 class="text-center">Sucursal virtual personas</h1>
-        <h3>Bienvenido</h3>
+    <header class="grid gap-0 row-gap-3">
+        <h1 class="text-center p-2">Sucursal virtual personas</h1>
+        <h3 class="p-2">Bienvenido <span id="userName" ></span></h3>
     </header>
     <nav class="navbar navbar-expand-lg navbar bg-primary"  data-bs-theme="dark">
         <div class="container-fluid">
@@ -49,15 +49,15 @@
         </div>
     </nav>
     <main class="row align-items-center container-fluid ">
-        <div id="opotions" class="btn-group-vertical col-3" role="group" aria-label="Vertical radio toggle button group">
-            <input type="radio" class="btn-check" name="add" id="add" autocomplete="off" >
-            <label class="btn btn-outline-primary" for="add">Añadir fondos</label>
-            <input type="radio" class="btn-check" name="less" id="less" autocomplete="off">
-            <label class="btn btn-outline-primary" for="less">Retirar fondos</label>
+        <div id="options" class="btn-group-vertical col-3" role="group" aria-label="Vertical radio toggle button group">
             <!-- <input type="radio" class="btn-check" name="transfer" id="transfer" autocomplete="off">
             <label class="btn btn-outline-primary" for="transfer">Transferencias</label>
             <input type="radio" class="btn-check" name="pay" id="pay" autocomplete="off">
             <label class="btn btn-outline-primary" for="pay">Pagar facturas</label> -->
+            <input type="radio" class="btn-check" name="vbtn-radio" id="add" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="add">Añadir fondos</label>
+            <input type="radio" class="btn-check" name="vbtn-radio" id="less" autocomplete="off">
+            <label class="btn btn-outline-primary" for="less">Retirar fondos</label>
         </div>
         <form id="introduceAmount" class="col-3 d-flex flex-column mb-3 container text-center fs-3">
             <label for="amount">Ingresa el monto</label>
@@ -73,7 +73,7 @@
         </form> 
         <section id="balance" class="col-3 gap-1">
             <p class="gap-1 container text-center">
-                <button class="btn btn-primary container-fluid " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <button class="btn btn-secondary container-fluid " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     Consulta tu saldo</button>
             </p>
             <div class="collapse" id="collapseExample">
