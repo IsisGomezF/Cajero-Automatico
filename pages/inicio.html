@@ -13,9 +13,12 @@
 
 </head>
 <body class="">
-    <header class="grid gap-0 row-gap-3">
+    <header class="">
         <h1 class="text-center p-2">Sucursal virtual personas</h1>
-        <h3 class="p-2">Bienvenido <span id="userName" ></span></h3>
+        <section class="d-flex justify-content-between p-3">
+            <h3>Bienvenido <span id="userName" ></span></h3>
+            <button id="close" type="submit" class="btn btn-secondary">Salida segura</button>
+        </section>
     </header>
     <nav class="navbar navbar-expand-lg navbar bg-primary"  data-bs-theme="dark">
         <div class="container-fluid">
@@ -25,7 +28,7 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Productos</a>
                 </li>
-                <li class="nav-item bg-primary-subtle">
+                <li class="nav-item ">
                     <a class="nav-link active " aria-current="page" href="#" >Transacciones</a>
                 </li>
                 <li class="nav-item">
@@ -77,7 +80,7 @@
         <section  class="col-6 gap-1">
             <h3 class="text-center p-2">Saldos por producto:</h3>
             <p class="gap-1 container text-center">
-                <button id="balanceButtom" class="btn btn-primary  " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <button id="balanceButtom" class="btn btn-dark  " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     Consulta tu saldo</button>
             </p>
             <div class="collapse" id="collapseExample">

@@ -15,7 +15,10 @@
 <body class="">
     <header class="">
         <h1 class="text-center p-2">Sucursal virtual personas</h1>
-        <h3 class="p-2">Bienvenido <span id="userName" ></span></h3>
+        <section class="d-flex justify-content-between p-3">
+            <h3>Bienvenido <span id="userName" ></span></h3>
+            <button id="close" type="submit" class="btn btn-secondary">Salida segura</button>
+        </section>
     </header>
     <nav class="navbar navbar-expand-lg navbar bg-primary"  data-bs-theme="dark">
         <div class="container-fluid">
@@ -49,16 +52,17 @@
         </div>
     </nav>
     <main class="row align-items-center container-fluid pt-5 ">
-        <!-- <section class="container text-center">
-            <h3>Añadir fondos:</h3>
-        </section> -->
         <div id="options" class="btn-group-vertical col-3" role="group" aria-label="Vertical radio toggle button group">
+            <input type="radio" class="btn-check" name="vbtn-radio" id="operations" autocomplete="off" checked>
+            <label class="btn btn-dark fs-4" for="operations">Accion</label> 
             <!--<input type="radio" class="btn-check" name="transfer" id="transfer" autocomplete="off">
             <label class="btn btn-outline-primary" for="transfer">Transferencias</label>
             <input type="radio" class="btn-check" name="pay" id="pay" autocomplete="off">
             <label class="btn btn-outline-primary" for="pay">Pagar facturas</label> -->
             <input type="radio" class="btn-check" name="vbtn-radio" id="add" autocomplete="off" checked>
             <label class="btn btn-outline-primary" for="add">Añadir fondos</label>
+            <!--<input type="radio" class="btn-check" name="vbtn-radio" id="less" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="less">Retirar fondos</label>-->
             <input type="radio" class="btn-check" name="vbtn-radio" id="home" autocomplete="off">
             <label class="btn btn-outline-secondary" for="home">Volver a pagina principal</label>
         </div>
@@ -76,7 +80,7 @@
         </form> 
         <section id="balance" class="col-3 gap-1">
             <p class="gap-1 container text-center">
-                <button id="balanceButtom" class="btn btn-secondary container-fluid " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <button id="balanceButtom" class="btn btn-primary container-fluid " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     Consulta tu saldo</button>
             </p>
             <div class="collapse" id="collapseExample">

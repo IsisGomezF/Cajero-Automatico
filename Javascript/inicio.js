@@ -66,3 +66,14 @@ function showLoader() {
 function hideLoader() {
     document.querySelector('#loader').classList.add('d-none');
 }
+
+//Salida segura
+const salida = document.getElementById("close")
+
+function out (){
+    localStorage.removeItem('name');//Borra el name
+    localStorage.removeItem('saldo');//Borra el saldo
+    window.location.href = '../style/index.html';
+};
+
+salida.addEventListener("click", out);
