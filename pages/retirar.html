@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transacciones en linea</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script defer src="./inicio.js"></script>
+    <script defer src="../Javascript/retirar.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 
 
 </head>
 <body class="">
-    <header class="grid gap-0 row-gap-3">
+    <header class="">
         <h1 class="text-center p-2">Sucursal virtual personas</h1>
         <h3 class="p-2">Bienvenido <span id="userName" ></span></h3>
     </header>
@@ -48,16 +48,19 @@
         </div>
         </div>
     </nav>
-    <main class="row align-items-center container-fluid ">
+    <main class="row align-items-center container-fluid pt-5 ">
+        <!-- <section class="container text-center">
+            <h3>Añadir fondos:</h3>
+        </section> -->
         <div id="options" class="btn-group-vertical col-3" role="group" aria-label="Vertical radio toggle button group">
-            <!-- <input type="radio" class="btn-check" name="transfer" id="transfer" autocomplete="off">
+            <!--<input type="radio" class="btn-check" name="transfer" id="transfer" autocomplete="off">
             <label class="btn btn-outline-primary" for="transfer">Transferencias</label>
             <input type="radio" class="btn-check" name="pay" id="pay" autocomplete="off">
             <label class="btn btn-outline-primary" for="pay">Pagar facturas</label> -->
             <input type="radio" class="btn-check" name="vbtn-radio" id="add" autocomplete="off" checked>
-            <label class="btn btn-outline-primary" for="add">Añadir fondos</label>
-            <input type="radio" class="btn-check" name="vbtn-radio" id="less" autocomplete="off">
-            <label class="btn btn-outline-primary" for="less">Retirar fondos</label>
+            <label class="btn btn-outline-primary" for="add">Retirar fondos</label>
+            <input type="radio" class="btn-check" name="vbtn-radio" id="home" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="home">Volver a pagina principal</label>
         </div>
         <form id="introduceAmount" class="col-3 d-flex flex-column mb-3 container text-center fs-3">
             <label for="amount">Ingresa el monto</label>
@@ -80,6 +83,11 @@
                 <div class="card card-body text-center">
                     HOLA
                 </div>
+            </div>
+        </section>
+        <section id="loader" class="d-none d-flex justify-content-center m-5">
+            <div class="spinner-border text-secondary" role="status">
+                <span class="visually-hidden">Loading...</span>
             </div>
         </section>
     </main>

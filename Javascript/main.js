@@ -1,8 +1,8 @@
 const accounts = [
-    { name: "Josefa", password: "1234", saldo: 1000000},
-    { name: "Cleto", password: "1234", saldo: 356900},
-    { name: "Estrella", password: "1234", saldo: 356900},
-    { name: "Chepe", password:"1234", saldo: 356900},
+    { name: "Josefa", password: "1234", saldo: 715},
+    { name: "Cleto", password: "1234", saldo: 356},
+    { name: "Estrella", password: "1234", saldo: 36},
+    { name: "Chepe", password:"1234", saldo: 650},
 ];
 
 //Referenciar formulario con ID

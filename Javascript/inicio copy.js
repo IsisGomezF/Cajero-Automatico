@@ -8,19 +8,6 @@ const accounts = [
 
 
 
-
-
-
-// //Pagina de inicio
-// const userName = document.getElementById("userName");
-
-// const nombre = localStorage.getItem('name');
-//     if (nombre !== null && nombre !== undefined) {
-//         userName.textContent = `${nombre}`;
-// }
-
-
-
 // const saldoInicial = accounts.find (accounts.saldo); // No estoy segura de la forma de recorre el arreglo
 // const topeMax = 990
 // const topeMin = 10
